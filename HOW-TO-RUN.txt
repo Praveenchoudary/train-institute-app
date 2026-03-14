@@ -1,0 +1,49 @@
+═══════════════════════════════════════════════════════════════
+  EduInstitute — How to Run
+═══════════════════════════════════════════════════════════════
+
+FIRST TIME (or after adding payment tables):
+─────────────────────────────────────────────
+  1. Open terminal in this folder
+  2. Run these two commands:
+
+       docker compose down -v
+       docker compose up --build -d
+
+  The "-v" wipes the old database so the payment tables get
+  created fresh. Only do this once — it deletes all your data.
+
+AFTER THAT (normal restarts, no data loss):
+────────────────────────────────────────────
+       docker compose up --build -d
+
+OPEN THE APP:
+─────────────
+  http://localhost
+
+LOGIN CREDENTIALS:
+──────────────────
+  Admin:    admin@institute.com   /   Admin@123456
+  Student:  ali@student.com       /   Student@123
+  Student:  nour@student.com      /   Student@123
+
+TEST PAYMENTS:
+──────────────
+  ✅ Success:  Card 4111 1111 1111 1111  |  Exp 12/28  |  CVV 123
+  ❌ Decline:  Card 4111 1111 1111 0000  |  Exp 12/28  |  CVV 123
+
+WATCH LOGS:
+───────────
+  docker compose logs -f backend
+  docker compose logs -f db
+
+STOP APP:
+─────────
+  docker compose down
+
+FULL RESET (deletes all data):
+───────────────────────────────
+  docker compose down -v
+  docker compose up --build -d
+
+═══════════════════════════════════════════════════════════════
