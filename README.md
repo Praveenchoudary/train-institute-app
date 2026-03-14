@@ -293,10 +293,6 @@ description        start_date        grade
 
 ---
 
-## 💡 Fix: Courses Not Showing
-
-The database migration (`001_schema.sql`) now includes **10 real seed courses** across 6 categories. They will appear automatically on first run.
-
 If you already have a running database with no courses:
 ```bash
 # Option 1: Reset the database (loses all data)
