@@ -134,11 +134,6 @@ First run takes ~3-5 minutes (downloads images, builds React app, seeds database
 - **App**: http://localhost
 - **API**: http://localhost/api/health
 
-### Step 5 — Login
-| Role | Email | Password |
-|------|-------|----------|
-| Admin | admin@institute.com | Admin@123456 |
-| Student | ali@student.com | password |
 
 ---
 
